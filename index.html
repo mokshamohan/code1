@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-box">
+        <h2>Expense Tracker</h2>
+        
+        <div class="balance-section">
+            <p>CURRENT BALANCE</p>
+            <h1>₹4,500.00</h1>
+        </div>
+
+        <div class="summary-boxes">
+            <div class="income-box">
+                <h3>Income</h3>
+                <p class="money-in">+₹5,000.00</p>
+            </div>
+            <div class="expense-box">
+                <h3>Expense</h3>
+                <p class="money-out">-₹500.00</p>
+            </div>
+        </div>
+
+        <h3>History</h3>
+        <ul class="transaction-list">
+            <li class="plus-item">
+                <span>💰 Pocket Money</span>
+                <span>+₹5,000.00</span>
+            </li>
+            <li class="minus-item">
+                <span>🍿 Snacks</span>
+                <span>-₹500.00</span>
+            </li>
+        </ul>
+
+        <h3>Add New Transaction</h3>
+        <form>
+            <div class="input-group">
+                <label>Description</label>
+                <input type="text" placeholder="e.g., Books, Food">
+            </div>
+            
+            <div class="input-group">
+                <label>Amount</label>
+                <input type="number" placeholder="e.g., 500 or -500">
+            </div>
+            
+            <button type="button" class="submit-btn">Add Transaction</button>
+        </form>
+    </div>
+
+</body>
+</html>
