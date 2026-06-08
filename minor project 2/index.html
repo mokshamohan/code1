@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Coffee Corner | Fresh Coffee Beans</title>
+  
+  <style>
+    /* BASIC STYLES */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fbfbfb;
+      color: #333333;
+    }
+
+    /* 1. NAVIGATION BAR (Flexbox) */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4a2c11; /* Dark brown */
+      padding: 15px 30px;
+    }
+    .navbar-logo {
+      color: #f5f5f5;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .navbar-links a {
+      color: #f5f5f5;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+    .navbar-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* 2. HERO SECTION (Flexbox side-by-side) */
+    .hero {
+      display: flex;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      align-items: center;
+      gap: 30px;
+    }
+    .hero-text {
+      flex: 1;
+    }
+    .hero-text h2 {
+      color: #4a2c11;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    .hero-text p {
+      color: #666666;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #8b5a2b;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 15px;
+    }
+    .btn:hover {
+      background-color: #704723;
+    }
+    .hero-image {
+      flex: 1;
+    }
+    .hero-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* 3. PRODUCT SECTION (CSS Grid for 3 Cards) */
+    .products-section {
+      background-color: #f5f5f5;
+      padding: 40px 20px;
+    }
+    .section-title {
+      text-align: center;
+      color: #4a2c11;
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .card {
+      background-color: white;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 15px;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+    .card h4 {
+      color: #4a2c11;
+      margin: 15px 0 5px 0;
+      font-size: 18px;
+    }
+    .card p {
+      color: #666666;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+    }
+    .price {
+      font-weight: bold;
+      color: #4a2c11;
+    }
+    .buy-btn {
+      background-color: #333333;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .buy-btn:hover {
+      background-color: #111111;
+    }
+
+    /* 4. FOOTER */
+    footer {
+      background-color: #4a2c11;
+      color: #d7ccc8;
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE DESIGN (Media Queries for Mobile Phones) */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+      .navbar-links {
+        margin-top: 10px;
+      }
+      .navbar-links a {
+        margin: 0 10px;
+      }
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .products-grid {
+        grid-template-columns: 1fr; /* Switch to 1 column on mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-logo">The Coffee Corner</div>
+    <div class="navbar-links">
+      <a href="#about">About Us</a>
+      <a href="#products">Our Coffee</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="about" class="hero">
+    <div class="hero-text">
+      <h2>Freshly Roasted Coffee Delivered To You</h2>
+      <p>We get our coffee beans directly from local farms and roast them every single day. This makes sure that you get the freshest and most flavorful cup of coffee every morning.</p>
+      <a href="#products" class="btn">See Our Coffee</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600" alt="Coffee Cup">
+    </div>
+  </section>
+
+  <section id="products" class="products-section">
+    <h3 class="section-title">Our Best Sellers</h3>
+    
+    <div class="products-grid">
+      
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500" alt="Dark roast">
+        <h4>Dark Roast</h4>
+        <p>A strong, rich coffee that tastes great with milk. Perfect for people who like a bold flavor.</p>
+        <div class="card-footer">
+          <span class="price">$14.99</span>
+          <button class="buy-btn">Buy</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500" alt="Medium roast">
+        <h4>Medium Roast</h4>
+        <p>A smooth and balanced coffee that you can drink all day. It has a slightly sweet taste.</p>
+        <div class="card-footer">
+          <span class="price">$13.50</span>
+          <button class="buy-btn">Buy</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=500" alt="Light roast">
+        <h4>Light Roast</h4>
+        <p>A light and mild coffee with a pleasant fruity smell. Great for a quick black coffee.</p>
+        <div class="card-footer">
+          <span class="price">$15.00</span>
+          <button class="buy-btn">Buy</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p><strong>The Coffee Corner</strong></p>
+    <p>Email us at: info@thecoffeecorner.com</p>
+    <hr style="border: 0; border-top: 1px solid #5d3a1a; margin: 15px 0;">
+    <p> 2026 The Coffee Corner. </p>
+  </footer>
+
+</body>
+</html>
